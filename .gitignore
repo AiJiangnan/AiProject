@@ -4,3 +4,4 @@ target
 .project
 .vscode
 *.bat
+*.log
