@@ -37,7 +37,7 @@ public class URLUtil {
         Pattern pattern = Pattern.compile(regs);
         try {
             URL u = new URL(url);
-            in = new BufferedReader(new InputStreamReader(u.openConnection().getInputStream(), "UTF-8"));
+            in = new BufferedReader(new InputStreamReader(u.openStream(), "UTF-8"));
             String line = null;
             while ((line = in.readLine()) != null) {
                 Matcher matcher = pattern.matcher(line);
@@ -78,9 +78,8 @@ public class URLUtil {
             conn.setRequestProperty("User-Agent", "Mozilla/4.0(compatible;MSIE 5.0;Window NT;DigExt)");
             is = conn.getInputStream();
             bos = new ByteArrayOutputStream();
-            while ((len = is.read(buffer)) != -1) {
+            while ((len = is.read(buffer)) != -1)
                 bos.write(buffer, 0, len);
-            }
             if (!saveDir.exists())
                 saveDir.mkdir();
             File file = new File(saveDir, fileName);
