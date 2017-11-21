@@ -20,7 +20,8 @@ public class DouBan {
 			List<String> name = URLUtil.getInfoByUrlRegs(url + i, nameRegs);
 			for (String string : name) {
 				if (string.indexOf("&nbsp;") < 0)
-					System.out.println("Top" + (index++) + "\t" + string.replace("<span class=\"title\">", "").replace("</span>", ""));
+					System.out.println("Top" + (index++) + "\t"
+							+ string.replace("<span class=\"title\">", "").replace("</span>", ""));
 			}
 		}
 	}

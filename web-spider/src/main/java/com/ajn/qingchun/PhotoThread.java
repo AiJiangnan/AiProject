@@ -5,6 +5,12 @@ import java.util.HashSet;
 import java.util.List;
 import org.apache.log4j.Logger;
 
+/**
+ * 抓取图片的线程类
+ * 
+ * @author 艾江南
+ * @version 1.0.0
+ */
 public class PhotoThread extends Thread {
 
     private String url;
