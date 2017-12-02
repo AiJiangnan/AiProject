@@ -20,7 +20,7 @@ public class JdbcConfigurationImpl implements JdbcConfiguration {
 
     @Override
     public List<TableProp> getTables(String tableName) {
-        List<TableProp> list = new ArrayList<>();
+        List<TableProp> list = new ArrayList<TableProp>();
         String sql = "SELECT * FROM " + tableName;
         Connection conn = jdbcConfig.getConnection();
         PreparedStatement stat = null;
@@ -50,7 +50,7 @@ public class JdbcConfigurationImpl implements JdbcConfiguration {
 
     @Override
     public Map<String, String> getTableInfo(String tableName) {
-        Map<String, String> result = new HashMap<>();
+        Map<String, String> result = new HashMap<String, String>();
         String sql = "SHOW FULL FIELDS FROM " + tableName;
         Connection conn = jdbcConfig.getConnection();
         PreparedStatement stat = null;

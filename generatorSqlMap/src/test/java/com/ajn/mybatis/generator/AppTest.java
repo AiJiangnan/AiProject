@@ -1,7 +1,6 @@
 package com.ajn.mybatis.generator;
 
 import java.io.File;
-import java.io.IOException;
 import org.apache.log4j.Logger;
 
 import junit.framework.Test;

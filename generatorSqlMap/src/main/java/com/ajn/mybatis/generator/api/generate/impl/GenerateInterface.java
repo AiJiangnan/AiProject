@@ -4,9 +4,7 @@ import java.io.File;
 import java.util.List;
 
 import com.ajn.mybatis.generator.api.generate.GenerateFile;
-import com.ajn.mybatis.generator.config.JdbcConfiguration;
 import com.ajn.mybatis.generator.config.XmlConfiguration;
-import com.ajn.mybatis.generator.config.impl.JdbcConfigurationImpl;
 import com.ajn.mybatis.generator.config.impl.XmlConfigurationImpl;
 import com.ajn.mybatis.generator.constants.Constants;
 import com.ajn.mybatis.generator.model.Tables;
@@ -23,7 +21,6 @@ import com.ajn.mybatis.generator.utils.NameUtil;
 public class GenerateInterface implements GenerateFile {
 
     private XmlConfiguration xmlConfig = new XmlConfigurationImpl();
-    private JdbcConfiguration jdbcConfig = new JdbcConfigurationImpl();
     private InterfaceTemplate interfaceTemplate = new InterfaceTemplateImpl();
 
     @Override
