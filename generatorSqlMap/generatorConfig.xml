@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config PUBLIC "/AIJIANGNANLOVEHOUJUANJUAN/" "generatorSqlMap.dtd">
+
+<config>
+	<jdbcConnection
+		driver="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/example"
+		username="root"
+		password="root"
+	></jdbcConnection>
+	<javaModelGenerator
+		targetPackage="com.gofun.credit.core.riskchannel.model.tencent"
+		targetProject="./src"
+	></javaModelGenerator>
+	<mapperGenerator
+		targetPackage="com.gofun.credit.core.riskchannel.dao.tencent"
+		targetProject="./src"
+	></mapperGenerator>
+	<javaInterfaceGenerator
+		targetPackage="com.gofun.credit.core.riskchannel.dao.tencent"
+		targetProject="./src"
+	></javaInterfaceGenerator>
+	<table className="" tableName="user"></table>
+</config>
